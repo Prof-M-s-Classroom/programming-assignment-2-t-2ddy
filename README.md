@@ -18,11 +18,11 @@ Example:
 ## **2. Folder & File Structure**
 (Explain the role of each file in your project.)
 
-- **`main.cpp`** → `[Describe its function]`  
-- **`GameDecisionTree.h`** → `[Explain what this file contains]`  
-- **`Node.h`** → `[Explain what this file contains]`  
-- **`Story.h`** → `[Explain what this file contains]`  
-- **`story.txt`** → `[Explain how the game loads story events from this file]`  
+- **`main.cpp`** → `Reads story text file and runs the game.`  
+- **`GameDecisionTree.h`** → `Contains the tree of the game events where the tree is built from the root node and contains the function to play run game`  
+- **`Node.h`** → `Node class to make our story events and give a path to the following events through left and right pointers.`  
+- **`Story.h`** → `Initializes the event elements through the story class.`  
+- **`story.txt`** → `[Explain how the game loads story events from this file] Each story event has an event number, the event, and possible routs at the end. The game should read from the root node and progress with only the possible following routs attached to the current node to -1.`
 
 ---
 
