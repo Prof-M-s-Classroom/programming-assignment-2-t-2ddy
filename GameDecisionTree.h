@@ -17,6 +17,21 @@ public:
     // TODO: Constructor
     GameDecisionTree() : root(nullptr) {}
 
+    GameDecisionTree(T data){
+        root = new Node<T>(data);
+    }
+    // destructor, dont plan on using, but here for good preactice.
+    ~GameDecisionTree(){
+        deleteTree(root);
+    }
+    void deleteTree(Node<T>* node){
+        if (node){
+            deleteTree(node->left);
+            deleteTree(node->right);
+            delete node;
+        }
+    }
+
     // TODO: Function to load story data from a text file and build the binary tree
     void loadStoryFromFile(const std::string& filename, char delimiter){}
 
