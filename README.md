@@ -55,6 +55,11 @@ Example:
 
 ## **6. Debugging Process (Errors & Fixes)**
 (Describe one or more debugging challenges you faced and how you fixed them.)
+GameDecisionTree.h:125:13: error: expected ';' before '}' token:
+- forgot a ; after a print statement
+GameDecisionTree.h:82:42: error: 'sotryData' was not declared in this scope;
+- spelling error
+Conditional logic mess up with capitalization, just found I was missing parenthasees () on left, Left and right, Right.
 
 Example:
 > Initially, my program was crashing when trying to access an uninitialized node. I realized it was because I was not properly checking for `nullptr` before accessing child nodes, so I added a check to prevent accessing uninitialized memory.
@@ -77,6 +82,7 @@ Example:
 
 ## **9. Edge Cases & Testing**
 (Describe at least one edge case you tested and its outcome.)
+Tested the case where someone enters an invalid input
 
 Example:
 > I tested a scenario where the player reaches a dead-end (leaf node) and ensured the program correctly ends the game.
