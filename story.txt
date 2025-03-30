@@ -1,6 +1,11 @@
-1 | You wake up in a forest clearing. There are two paths. | 2 | 3
-2 | You follow the path to the left and encounter a river. | 4 | 5
-3 | You go right and find an old cabin. | 5 | 6
-4 | You swim across the river and find a treasure chest. | -1 | -1
-5 | You find a hidden passageway that leads to a secret room. | 7 | -1
-6 | The cabin is empty. You find a trapdoor leading downwards. | -1
+1 | You are beginning to prepare dinner for you and your family. | 2 | 3
+2 | You prepare the protein first. | -1 | 4
+3 | You prepare the vegtable stirfry first. | 4 | -1
+4 | You start cooking. | 5 | 6
+5 | Watch the food cook. | 7 | 8
+6 | Run to check on your kids fighting. | -1 | 9
+7 | Check for amazon package on porch. | 10 | -1
+8 | Continue to watch the food cook. | -1 | 11
+9 | It was nothing, but dinner burned ;-;. Takeout? | -1 | -1
+10 | Food burned ;-;, but at least you got your stuff :D. | -1 | -1
+11 | Amazing Dinner!!!!!!! but where's your package? | -1 | -1
