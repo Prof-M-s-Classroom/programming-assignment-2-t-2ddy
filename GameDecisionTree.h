@@ -95,33 +95,40 @@ public:
     
         while (currentNode) {
     
-            cout << currentNode->data.description << endl;
+            cout << "\n" << currentNode->data.description << endl;
     
             if (currentNode->data.leftEventNumber == -1 && currentNode->data.rightEventNumber == -1){
                 cout << "\n fin" << endl;
                 break;
             }
     
-            cout <<"left or right path? --some might only have one way.."<<endl;
+            cout <<"what next? option 1 or 2?"<<endl;
     
-            if(currentNode->data.leftEventNumber != -1){
-                cout << "left?" << endl;
+            bool hasLeftChoice = (currentNode->data.leftEventNumber != -1 && currentNode->left);
+            bool hasRightChoice = (currentNode->data.rightEventNumber != -1 && currentNode->right);
+
+            if (hasLeftChoice){
+                string leftOptionText = currentNode->left->data.description;
+                string preview1 = leftOptionText.substr();
+                cout << "1. " << preview1 << endl;
             }
-            if(currentNode->data.rightEventNumber != -1){
-                cout << "right?" << endl;
+            if (hasRightChoice){
+                string rightOptionText = currentNode->right->data.description;
+                string preview2 = rightOptionText.substr();
+                cout << "2. " << preview2 << endl;
             }
-    
-            string input;
+            
+            int input;
             cin >> input;
     
-            if ((input == "left" || input == "Left") && currentNode ->left){
+            if (input == 1 && currentNode ->left){
                 currentNode = currentNode->left;
             }
-            else if ((input == "right" || input == "Right") && currentNode ->left){
+            else if (input == 2 && currentNode ->right){
                 currentNode = currentNode->right;
             }
             else{
-                cout<< "its either left, right, Left, or Right!!!";
+                cout<< "its either 1 or 2" << endl;
             }
     
         }   
